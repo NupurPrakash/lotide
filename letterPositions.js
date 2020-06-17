@@ -29,6 +29,8 @@ const letterPositions = function(sentence) {
 
 assertArraysEqual(letterPositions('hello').e,[1]);
 console.log(letterPositions('hello'));
+console.log(letterPositions('Lighthouse in the Lab'));
+
 
 // {
 //   h: [0],
