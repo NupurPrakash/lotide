@@ -34,7 +34,7 @@ const eqObjects = function(object1,object2) {
     }
      return true;
 };
-  
+  /*
 const ab = {
   a : "1",
   b : "2",
@@ -64,3 +64,7 @@ console.log(eqArrays([1, 2, 3], [1, 2, 3]));
 assertEqual(eqObjects(cd,cd2), true);
 assertEqual(eqObjects(ab,abc), "4");
 assertEqual(eqObjects(dc, cd2),false);
+*/
+const ab = { a: "1", b: "2" };
+const ba = { b: "2", c: "1" };
+console.log(eqObjects(ab,ba));
