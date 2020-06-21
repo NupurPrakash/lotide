@@ -1,23 +1,11 @@
-
-const eqArrays = function(array1,array2) {
-  let match = true;
-  for (let i = 0; i < array1.length; i++) {
-    if (array1[i] !== array2[i]) {
-      match = false;
-    }
-  }
-  return match;
-};
-
-const assertArraysEqual = function(val1,val2) {
-  console.log(eqArrays(val1, val2));
-};
+const eqArrays = require('./eqArrays');
+const assertArraysEqual = require('./assertArraysEqual');
 
 const middle = function(array) {
   let middlePos;
   let middleVal = [];
   if (array.length === 1 || array.length === 2) {
-    middleVal = array;
+    return middleVal;
   }
   if (array.length % 2 === 0) {
     middlePos = Math.floor(array.length / 2);
@@ -30,10 +18,17 @@ const middle = function(array) {
   }
   return middleVal;
 };
+
+module.exports = middle;
+
+
+/*
 console.log(middle([1]));
 console.log(middle([1,2]));
 console.log(middle([1,2,3,4,5]));
 console.log(middle([1,2,3,4,5,6]));
+console.log(middle(["a","b","c"]));
+*/
 
-assertArraysEqual(middle([1,2,3,4,5]), [1, 2, 3]);
-assertArraysEqual(middle(["1", "2", "3"]), ["1", "2", "3"]);
+
+
